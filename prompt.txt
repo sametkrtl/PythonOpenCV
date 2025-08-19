@@ -1,0 +1,10 @@
+Bana aşağıdaki etiketler için örnek veri listeleri oluştur:
+sirket, tarih, ad_soyad, para, adres, telefon (her biri için en az 50 örnek)
+sirket, ad_soyad ve adres etiketlerinde ayrıca 3 karakterden 35 karaktere kadar (her uzunluk için en az 2 örnek) sahte veri üret.
+Veriler Türkçe gerçekçi görünsün (örnek: kişi isimleri, Türkçe şirket/unvan, Türkçe adres biçimleri, TL/USD/EUR para formatları, Türkiye’de kullanılan telefon numaraları, tarih formatları).
+Çıktıyı Python listesi olarak ver; her etiket için ayrı liste değişkeni tanımla.
+Ekstra olarak, uzunluk bazlı örnekleri ayrı sözlüklerde (ör. sirket_len_samples, ad_soyad_len_samples, adres_len_samples) göster.
+tc_kimlik etiketi için hiç veri üretme. Regex mantığı devam edecek ekstra olarak tckimlik numarası kurallarına göre yeni değerler ile doldurulmasını istiyorum.
+Bu listeleri ben kendi kodumda Faker yerine kullanacağım; yani üretilecek sahte değerler her zaman bu listelerden çekilecek.
+
+şimdi sana bir tane kod yapıştırdım. Senden istediğim kodda yer alan faker kütüphanesi işlemlerini iptal edip listelerdeki verileri kullanman. Kullanım Senaryosu Örneği: Eğer metin içinde geçen BİM marka olarak etiketlendiyse onun yerine yine 3 karakterli bir marka gelmeli. Eğer birden fazla 3 karakterli veri varsa onların arasından biri rastgele seçilmeli. Cümle içinde birden fazla aynı etiketten geçiyorsa ona yine aynı değer verilmeli. Örnek: BİM eğer ilk örnekte ŞOK ile değiştirildiyse metin içinde bir daha geçiyorsa yine ŞOK ile değişitirilmeli.
